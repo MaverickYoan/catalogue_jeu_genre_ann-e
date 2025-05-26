@@ -49,28 +49,29 @@ if (
     <!-- NAVBAR -->
     <nav class="navbar">
         <ul class="nav-links" id="navLinks">
-            <li><a class="links" href="http://localhost:8000/game.php">game</a></li>
-            <li><a class="links" href="http://localhost:8000/index.php">index</a></li>
-            <li><a class="links" href="http://localhost:8000/add.php">Ajout Game</a></li>
-            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier User</a></li>
+            <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
+            <li><a class="links" href="http://localhost:8000/jeu.php">Game</a></li>
+            <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
+            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
             <a href="/">Back to menu</a>
         </ul>
     </nav>
 
     <hr />
-    <img width="10%" src="img/w6a6775zvp661.gif" alt="gif d'ajout d'utilisateur">
+    <img width="10%" src="src\img\0Jvtfvy.gif" alt="Gran turismo 2 sur playstation">
     <br>
-    <h1 style="border:1px solid black; background-color: black; color: white; width:fit-content">Page des données</h1>
+    <h1 style="border:1px solid black; background-color: black; color: white; width:fit-content">Jeu</h1>
     <h1 style="border:1px solid black; width:fit-content"><?= $game['jeu'] ?></h1>
     <h1 style="border:1px solid black; width:fit-content"><?= $game['genre'] ?></h1>
-    <!-- <p>Prénom : Yo</p>
+    <h1 style="border:1px solid black; width:fit-content"><?= $game['année'] ?></h1>
+    <!-- <p>Jeu : Yo</p>
     <p>Nom : YDM</p> -->
 
 <?php
     else:
 ?>
 
-    <p>user nok</p>
+    <p>jeu non présent</p>
     <a href="/">Back to menu</a>
 
 <?php
@@ -82,7 +83,7 @@ if (
 <!-- // * FOOTER -->
 <footer>
     <div class="droits">
-        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue | @onlineformapro | Mentions légales</h6>
+        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
     </div>
 </footer>
 

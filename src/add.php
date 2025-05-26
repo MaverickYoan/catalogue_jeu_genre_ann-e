@@ -68,27 +68,29 @@ if ($_POST) {
 
 <body style="background-image: url(img/totoro.gif); background-repeat: no-repeat; background-position: right;">
 
-    <img width="10%" src="img/user-3-16403 (1).gif" alt="gif d'ajout d'utilisateur">
+    <img width="10%" src="img/anigif_sub-buzz-30793-1468227108-2 (1).gif" alt="Jeu Gosht'n Globlin">
 
     <!-- NAVBAR -->
     <nav class="navbar">
         <ul class="nav-links" id="navLinks">
-            <li><a class="links" href="http://localhost:8000/game.php">game</a></li>
-            <li><a class="links" href="http://localhost:8000/index.php">index</a></li>
-            <li><a class="links" href="http://localhost:8000/add.php">Ajout Game</a></li>
-            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier User</a></li>
+            <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
+            <li><a class="links" href="http://localhost:8000/jeu.php">Game</a></li>
+            <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
+            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
             <a href="/">Back to menu</a>
         </ul>
     </nav>
 
-    <p style="border: 1px solid black; width: fit-content; background-color: green; color: white"><b>Ajouter un game</b></p>
+    <p style="border: 1px solid black; width: fit-content; background-color: green; color: white"><b>Ajouter un jeu</b></p>
 
     <!-- post envoie en masquer un formulaire -->
     <form method="post">
-        <label for="jeu">jeu</label>
+        <label for="jeu">Jeu</label>
         <input type="text" Name="jeu" id="jeu" required>
-        <label for="genre">genre</label>
+        <label for="genre">Genre</label>
         <input type="text" Name="genre" id="genre" required>
+        <label for="année">Année</label>
+        <input type="text" Name="année" id="année" required>
         <input type="submit" value="Ajouter">
     </form>
 
@@ -97,7 +99,7 @@ if ($_POST) {
 <!-- // * FOOTER -->
 <footer>
     <div class="droits">
-        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue | @onlineformapro | Mentions légales</h6>
+        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
     </div>
 </footer>
 

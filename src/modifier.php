@@ -7,14 +7,16 @@ if ($_POST) {
     if (
         !empty($_POST["jeu"])
         && !empty($_POST["genre"])
+        && !empty($_POST["année"])
     ) {
         $id = filter_var($_POST["id"], FILTER_VALIDATE_INT);
         $jeu = htmlspecialchars(strip_tags($_POST["jeu"]));
         $genre = htmlspecialchars(strip_tags($_POST["genre"]));
+        $année = htmlspecialchars(strip_tags($_POST["année"]));
 
         // * Mise à jour des données jeu et/ou genre
         $sql = "UPDATE catalogue
-        SET jeu = :jeu, genre = :genre 
+        SET jeu = :jeu, genre = :genre, année = :année
         WHERE id=:id;";
 
         $query = $db->prepare($sql);
@@ -83,29 +85,32 @@ if (
 
 <body style="background-image: url(img/tHi.gif); background-repeat: no-repeat;">
 
-    <img width="10%" src="img/user-3-16403 (1).gif" alt="gif d'ajout d'utilisateur">
+    <img width="10%" src="img/anigif_sub-buzz-30793-1468227108-2 (1).gif" alt="Jeu Gosht'n Globlin">
 
     <!-- NAVBAR -->
     <nav class="navbar">
         <ul class="nav-links" id="navLinks">
-            <li><a class="links" href="http://localhost:8000/game.php">game</a></li>
-            <li><a class="links" href="http://localhost:8000/index.php">index</a></li>
-            <li><a class="links" href="http://localhost:8000/add.php">Ajout Game</a></li>
-            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier User</a></li>
+            <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
+            <li><a class="links" href="http://localhost:8000/jeu.php">Game</a></li>
+            <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
+            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
             <a href="/">Back to menu</a>
         </ul>
     </nav>
 
-    <p style="border: 1px solid black; width: fit-content; background-color: yellow; color: black"><b>Modifier un game</b></p>
+    <p style="border: 1px solid black; width: fit-content; background-color: yellow; color: black"><b>Modifier un jeu</b></p>
 
     <!-- post envoie en masquer un formulaire -->
     <form method="post">
-        <label for="jeu">Prénom</label>
-        <!--// * Nous insérons la valeur du prénom du game dans le champ jeu -->
+        <label for="jeu">Jeu</label>
+        <!--// * Nous insérons la valeur du Jeu du game dans le champ jeu -->
         <input type="text" Name="jeu" id="jeu" value="<?= $game["jeu"] ?>" required>
-        <label for="genre">Nom</label>
-        <!--// * Nous insérons la valeur du prénom du game dans le champ genre -->
+        <label for="genre">Genre</label>
+        <!--// * Nous insérons la valeur du Genre du game dans le champ genre -->
         <input type="text" Name="genre" id="genre" value="<?= $game["genre"] ?>" required>
+        <label for="année">Année</label>
+        <!--// * Nous insérons la valeur de l'Année du game dans le champ genre -->
+        <input type="text" Name="année" id="année" value="<?= $game["année"] ?>" required>
         <!--// * Champ caché -->
         <input type="hidden" name="id" value="<?= $game["id"] ?>">
         <input type="submit" value="Modifier">
@@ -116,7 +121,7 @@ if (
 <!-- // * FOOTER -->
 <footer>
     <div class="droits">
-        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue | @onlineformapro | Mentions légales</h6>
+        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
     </div>
 </footer>
 

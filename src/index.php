@@ -55,13 +55,15 @@ require "disconnect.php";
             <th style="border:1px solid black;">id</th>
             <th style="border:1px solid black;">jeu</th>
             <th style="border:1px solid black;">genre</th>
+            <th style="border:1px solid black;">Année</th>
             <th style="border:1px solid black;">Actions</th>
         </thead>
         <tbody style="border:1px solid black;">
             <tr>
                 <td style="border:1px solid black;">123</td>
-                <td style="border:1px solid black;">Gran Tourismo</td>
-                <td style="border:1px solid black;">Pane cake</td>
+                <td style="border:1px solid black;">Gran Turismo</td>
+                <td style="border:1px solid black;">Course</td>
+                <td style="border:1px solid black;">1997</td>
                 <td style="border:1px solid black;">no action</td>
             </tr>
 
@@ -72,6 +74,7 @@ require "disconnect.php";
                     <td style="border:1px solid black;"><?= $game['id'] ?> </td>
                     <td style="border:1px solid black;"><?= $game['jeu'] ?> </td>
                     <td style="border:1px solid black;"><?= $game['genre'] ?> </td>
+                    <td style="border:1px solid black;"><?= $game['année'] ?> </td>
                     <td style="border:1px solid black;">
                         <a style="border:1px solid black;" href="game.php?id=<?= $game['id'] ?>">Voir</a>
                         <a style="border:1px solid black;" href="modifier.php?id=<?= $game['id'] ?>">Modifier</a>
@@ -86,14 +89,14 @@ require "disconnect.php";
     <br>
     <img width="10%" src="img/11919432.gif" alt="gif d'ajout d'utilisateur">
     <br>
-    <a href="./add.php"><button>Ajouter un données</button></a>
+    <a href="./add.php"><button>Ajouter un jeu</button></a>
 
     <br><br>
 
     <hr />
 
     <div style="display: flex; justify-content:center;">
-        <?php echo "helluuuuu"; ?>
+        <?php echo "helluuuuu U"; ?>
     </div>
 
     <hr>
@@ -101,10 +104,10 @@ require "disconnect.php";
     <!-- NAVBAR -->
     <nav class="navbar">
         <ul class="nav-links" id="navLinks">
-            <li><a class="links" href="http://localhost:8000/game.php">game</a></li>
-            <li><a class="links" href="http://localhost:8000/index.php">index</a></li>
-            <li><a class="links" href="http://localhost:8000/add.php">Ajout Game</a></li>
-            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier User</a></li>
+            <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
+            <li><a class="links" href="http://localhost:8000/jeu.php">Game</a></li>
+            <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
+            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
             <a href="/">Back to menu</a>
         </ul>
     </nav>
@@ -139,7 +142,7 @@ require "disconnect.php";
 <!-- // * FOOTER -->
 <footer>
     <div class="droits">
-        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue | @onlineformapro | Mentions légales</h6>
+        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
     </div>
 </footer>
 
