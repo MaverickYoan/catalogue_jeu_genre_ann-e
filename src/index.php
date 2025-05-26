@@ -125,18 +125,6 @@ require "disconnect.php";
 
     ?>
 
-    <!-- back-to-top section -------------->
-    <a href="#content" class="back-to-top">
-        <span>Retour en haut</span>
-        <!-- aria-hidden="true" opur masquer l'icon de l'écran -->
-        <svg width="18" height="18" viewbox=" 0 0 24 24" aria-hidden="true">
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-        </svg>
-
-        <!-- Script Section : Script pour activer le menu mobile -->
-        <script src="script.js"></script>
-
 </body>
 
 <!-- // * FOOTER -->
