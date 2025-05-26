@@ -1,0 +1,123 @@
+<?php
+// * Check si connexion réussie
+require_once "connect.php";
+
+// * $_POST (superglobale check si l'utilisateur à cliqué sur submit si le form est en method = $_POST)
+if ($_POST) {
+    if (
+        !empty($_POST["jeu"])
+        && !empty($_POST["genre"])
+    ) {
+        $id = filter_var($_POST["id"], FILTER_VALIDATE_INT);
+        $jeu = htmlspecialchars(strip_tags($_POST["jeu"]));
+        $genre = htmlspecialchars(strip_tags($_POST["genre"]));
+
+        // * Mise à jour des données jeu et/ou genre
+        $sql = "UPDATE catalogue
+        SET jeu = :jeu, genre = :genre 
+        WHERE id=:id;";
+
+        $query = $db->prepare($sql);
+
+        // * Rattacher les valeurs de bindValue id à la requête SQL
+        $query->bindValue(":id", $id, PDO::PARAM_INT);
+
+        // * Rattacher les valeurs de bindValue jeu à la requête SQL
+        $query->bindValue(":jeu", $jeu, PDO::PARAM_STR);
+
+        // * Rattacher les valeurs de bindValue genre à la requête SQL
+        $query->bindValue(":genre", $genre, PDO::PARAM_STR);
+
+        // * Rattacher les valeurs de bindValue genre à la requête SQL
+        $query->bindValue(":année", $année, PDO::PARAM_STR);
+
+        // * Exécution de la requête SQL
+        $query->execute();
+
+        // * Renvoyer le nouvel utilisateur à la page d'accueil après ajout
+        header("Location: index.php");
+
+        // * Pour terminer toutes exécution de scripts
+        exit;
+    }
+}
+
+// * Est-ce que les champs de formulaire sont définis
+if (
+    isset($_GET["id"])      // Vérifie si la variable 'id' existe dans l'URL (ex: ?id=123)
+    && !empty($_GET["id"])  // Vérifie si cette variable n'est pas vide (ex: ?id=)
+) {
+
+    // * Définitions de variables
+    $id = $_GET["id"];
+    // print_r($id);
+
+    // * sql SELECT 
+    $sql = "SELECT * FROM catalogue WHERE id = :id";
+
+    // * préparation de la requête sql
+    $query = $db->prepare($sql);
+
+    // * Rattacher les valeurs de bindValue id à la requête SQL
+    $query->bindValue(':id', $id, PDO::PARAM_INT);
+
+    // * exécution de la requête sql
+    $query->execute();
+
+    $game = $query->fetch();
+    // print_r($game);
+
+    require "disconnect.php";
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta Name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modif_php_crud</title>
+</head>
+
+<body style="background-image: url(img/tHi.gif); background-repeat: no-repeat;">
+
+    <img width="10%" src="img/user-3-16403 (1).gif" alt="gif d'ajout d'utilisateur">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <ul class="nav-links" id="navLinks">
+            <li><a class="links" href="http://localhost:8000/game.php">game</a></li>
+            <li><a class="links" href="http://localhost:8000/index.php">index</a></li>
+            <li><a class="links" href="http://localhost:8000/add.php">Ajout Game</a></li>
+            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier User</a></li>
+            <a href="/">Back to menu</a>
+        </ul>
+    </nav>
+
+    <p style="border: 1px solid black; width: fit-content; background-color: yellow; color: black"><b>Modifier un game</b></p>
+
+    <!-- post envoie en masquer un formulaire -->
+    <form method="post">
+        <label for="jeu">Prénom</label>
+        <!--// * Nous insérons la valeur du prénom du game dans le champ jeu -->
+        <input type="text" Name="jeu" id="jeu" value="<?= $game["jeu"] ?>" required>
+        <label for="genre">Nom</label>
+        <!--// * Nous insérons la valeur du prénom du game dans le champ genre -->
+        <input type="text" Name="genre" id="genre" value="<?= $game["genre"] ?>" required>
+        <!--// * Champ caché -->
+        <input type="hidden" name="id" value="<?= $game["id"] ?>">
+        <input type="submit" value="Modifier">
+    </form>
+
+</body>
+
+<!-- // * FOOTER -->
+<footer>
+    <div class="droits">
+        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue | @onlineformapro | Mentions légales</h6>
+    </div>
+</footer>
+
+</html>
