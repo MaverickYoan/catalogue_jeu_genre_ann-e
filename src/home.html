@@ -8,8 +8,8 @@
     <meta charset=utf-8>
     <meta content="width=device-width,initial-scale=1" name=viewport>
     <link rel="icon" href="favicon.ico" type="image/x-svg">
-    <link rel="stylesheet" href="style.css">
-    <link rel="javascript" href="script.js">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="javascript" href="script/script.js">
     <!-- TITRE -->
     <title>Index_Jeux_Vidéos</title>
 </head>
@@ -32,7 +32,7 @@
             <li><a href="http://localhost:8000/liste.php">Liste de Jeux</a></li>
             <li><a href="http://localhost:8000/add.php">Ajout jeu</a></li>
             <li><a href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
-            <li><a href="/">Back to menu</a></li>
+            <li><a class="links" href="/">Back to menu</a></li>
         </ul>
     </nav>
 
@@ -88,41 +88,26 @@
     <br>
     <a href="./add.php"><button>Ajouter un jeu</button></a>
 
-    <script>// * script mobile menu
-        document.addEventListener('DOMContentLoaded', () => {
+    <!-- * FOOTER -->
+    <footer>
+        <div class="droits">
+            <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos |
+                @onlineformapro |
+                Mentions légales</h6>
+        </div>
+    </footer>
 
-            const burger = document.getElementById('hamburgerMenu');
-            const links = document.getElementById('navLinks');
-            burger.addEventListener('click', function () {
-                this.classList.toggle('active');
-                links.classList.toggle('active');
-            });
-        });
-
-        document.getElementById('hamburgerMenu').addEventListener('click', function () {
-            this.classList.toggle('active');
-            document.getElementById('navLinks').classList.toggle('active');
-        });
-
-    </script>
-</body>
-
-<!-- * FOOTER -->
-<footer>
-    <div class="droits">
-        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro |
-            Mentions légales</h6>
-    </div>
-</footer>
-<script src="script.js"></script>
-
-<!-- back-to-top section -------------->
-<!-- <a href="#content" class="back-to-top">
+    <!-- back-to-top section -------------->
+    <!-- <a href="#content" class="back-to-top">
     <span>top</span>
     aria-hidden="true" opur masquer l'icon de l'écran
     <svg width="10" height="10" viewbox=" 0 0 24 24" aria-hidden="true">
         <path d="M5 12h14" />
         <path d="m12 5 7 7-7 7" /> -->
-<!-- </svg> -->
+    <!-- </svg> -->
+
+    <script src="script/script.js"></script>
+
+</body>
 
 </html>

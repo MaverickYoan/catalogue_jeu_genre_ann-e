@@ -55,7 +55,7 @@ if (
             <li><a class="links" href="http://localhost:8000/liste.php">Liste de Jeux</a></li>
             <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
             <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
-            <a href="/">Back to menu</a>
+            <li><a class="links" href="/">Back to menu</a></li>
         </ul>
     </nav>
 
@@ -79,13 +79,15 @@ if (
     endif;
 ?>
 
-</body>
-
 <!-- // * FOOTER -->
 <footer>
     <div class="droits">
         <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
     </div>
 </footer>
+
+</body>
+
+<script src="script/script.js"></script>
 
 </html>

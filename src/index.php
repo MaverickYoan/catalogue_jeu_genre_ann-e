@@ -51,7 +51,7 @@ require "disconnect.php";
             <li><a class="links" href="http://localhost:8000/liste.php">Liste de Jeux</a></li>
             <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
             <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
-            <a href="/">Back to menu</a>
+            <li><a class="links" href="/">Back to menu</a></li>
         </ul>
     </nav>
 
@@ -134,24 +134,24 @@ require "disconnect.php";
     // phpinfo(INFO_MODULES);
 
     ?>
-    <script src="script.js"></script>
+    <!-- // * FOOTER -->
+    <footer>
+        <div class="droits">
+            <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
+        </div>
+    </footer>
+
+    <!-- back-to-top section -------------->
+    <a href="#content" class="back-to-top">
+        <span>top</span>
+        <!-- aria-hidden="true" opur masquer l'icon de l'écran -->
+        <svg width="10" height="10" viewbox=" 0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+        </svg>
+
+        <script src="script/script.js"></script>
 
 </body>
-
-<!-- // * FOOTER -->
-<footer>
-    <div class="droits">
-        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
-    </div>
-</footer>
-
-<!-- back-to-top section -------------->
-<a href="#content" class="back-to-top">
-    <span>top</span>
-    <!-- aria-hidden="true" opur masquer l'icon de l'écran -->
-    <svg width="10" height="10" viewbox=" 0 0 24 24" aria-hidden="true">
-        <path d="M5 12h14" />
-        <path d="m12 5 7 7-7 7" />
-    </svg>
 
 </html>

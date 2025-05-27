@@ -30,14 +30,14 @@ require "disconnect.php";
     <meta charset=utf-8>
     <meta content="width=device-width,initial-scale=1" name=viewport>
     <link rel="icon" href="src\favicon.ico" type="image/x-svg">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="css/style liste.css">
     <!-- TITRE -->
     <title>Index_Jeux_Vidéos</title>
 </head>
 
-<!-- BODY -->
+<!-- BODY  style="background-image: url(b3b48a35785465ed53f20d332f191a5c.gif);-->
 
-<body id="content" style="background-image: url(b3b48a35785465ed53f20d332f191a5c.gif);">
+<body id="content">
 
     <!-- NAVBAR -->
     <nav class="navbar">
@@ -47,7 +47,7 @@ require "disconnect.php";
             <li><a class="links" href="http://localhost:8000/liste.php">Liste de Jeux</a></li>
             <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
             <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
-            <a href="/">Back to menu</a>
+            <li><a class="links" href="/">Back to menu</a></li>
         </ul>
     </nav>
 
@@ -57,40 +57,40 @@ require "disconnect.php";
     <h1 style="color:green; font-size:14px;">TABLE SQL jeux</h1>
 
     <!-- // * Table jeux -->
-    <table style="border:1px solid black;">
+    <table style="border:1px solid white;">
         <!-- <pre> -->
         <?php
         // print_r($jeux)
         ?>
         <!-- </pre> -->
-        <thead style="border:1px solid black;">
-            <th style="border:1px solid black;">id</th>
-            <th style="border:1px solid black;">jeu</th>
-            <th style="border:1px solid black;">genre</th>
-            <th style="border:1px solid black;">annee</th>
-            <th style="border:1px solid black;">Actions</th>
+        <thead style="border:1px solid white;">
+            <th style="border:1px solid white;">id</th>
+            <th style="border:1px solid white;">jeu</th>
+            <th style="border:1px solid white;">genre</th>
+            <th style="border:1px solid white;">annee</th>
+            <th style="border:1px solid white;">Actions</th>
         </thead>
-        <tbody style="border:1px solid black;">
+        <tbody style="border:1px solid white;">
             <tr>
-                <td style="border:1px solid black;">123</td>
-                <td style="border:1px solid black;">Gran Turismo</td>
-                <td style="border:1px solid black;">Course</td>
-                <td style="border:1px solid black;">1997</td>
-                <td style="border:1px solid black;">no action</td>
+                <td style="border:1px solid white;">123</td>
+                <td style="border:1px solid white;">Gran Turismo</td>
+                <td style="border:1px solid white;">Course</td>
+                <td style="border:1px solid white;">1997</td>
+                <td style="border:1px solid white;">no action</td>
             </tr>
 
             <?php
             foreach ($jeux as $jeu): ?>
 
                 <tr>
-                    <td style="border:1px solid black;"><?= $jeu['id'] ?> </td>
-                    <td style="border:1px solid black;"><?= $jeu['jeu'] ?> </td>
-                    <td style="border:1px solid black;"><?= $jeu['genre'] ?> </td>
-                    <td style="border:1px solid black;"><?= $jeu['annee'] ?> </td>
-                    <td style="border:1px solid black;">
-                        <a style="border:1px solid black;" href="jeu.php?id=<?= $jeu['id'] ?>">Voir</a>
-                        <a style="border:1px solid black;" href="modifier.php?id=<?= $jeu['id'] ?>">Modifier</a>
-                        <a style="border:1px solid black;" href="supprimer.php?id=<?= $jeu['id'] ?>">Supprimer</a>
+                    <td style="border:1px solid white;"><?= $jeu['id'] ?> </td>
+                    <td style="border:1px solid white;"><?= $jeu['jeu'] ?> </td>
+                    <td style="border:1px solid white;"><?= $jeu['genre'] ?> </td>
+                    <td style="border:1px solid white;"><?= $jeu['annee'] ?> </td>
+                    <td style="border:1px solid white;">
+                        <a href="jeu.php?id=<?= $jeu['id'] ?>">Voir</a>
+                        <a href="modifier.php?id=<?= $jeu['id'] ?>">Modifier</a>
+                        <a href="supprimer.php?id=<?= $jeu['id'] ?>">Supprimer</a>
                     </td>
                 </tr>
             <?php endforeach ?>
@@ -99,7 +99,6 @@ require "disconnect.php";
     </table>
 
     <br>
-    <img width="10%" src="img/11919432.gif" alt="gif d'ajout d'utilisateur">
     <img width="10%" src="img/icon-256x256.gif" alt="gif d'ajout d'utilisateur">
     <br>
     <br>
@@ -132,22 +131,24 @@ require "disconnect.php";
 
     ?>
 
+    <!-- // * FOOTER -->
+    <footer>
+        <div class="droits">
+            <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_jeux_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
+        </div>
+    </footer>
+
+    <!-- back-to-top section -------------->
+    <a href="#content" class="back-to-top">
+        <span>top</span>
+        <!-- aria-hidden="true" opur masquer l'icon de l'écran -->
+        <svg width="10" height="10" viewbox=" 0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+        </svg>
+
+        <script src="script/script.js"></script>
+
 </body>
-
-<!-- // * FOOTER -->
-<footer>
-    <div class="droits">
-        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_jeux_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
-    </div>
-</footer>
-
-<!-- back-to-top section -------------->
-<a href="#content" class="back-to-top">
-    <span>top</span>
-    <!-- aria-hidden="true" opur masquer l'icon de l'écran -->
-    <svg width="10" height="10" viewbox=" 0 0 24 24" aria-hidden="true">
-        <path d="M5 12h14" />
-        <path d="m12 5 7 7-7 7" />
-    </svg>
 
 </html>
