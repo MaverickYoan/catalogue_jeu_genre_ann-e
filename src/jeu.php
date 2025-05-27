@@ -8,7 +8,7 @@ if (
     // * Définitions de variables
     require_once "connect.php";
     $id = $_GET["id"];
-    print_r($id);
+    // print_r($id);
 
     // * sql SELECT
     $sql = "SELECT * FROM catalogue WHERE id = :id";
@@ -27,7 +27,7 @@ if (
 }
 ?>
 
-<!-- http://localhost:8000/game.php?id=3 -->
+<!-- http://localhost:8000/jeu.php?id=3 -->
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,31 +1,3 @@
-<?php
-require_once "connect.php";
-
-// * sql SELECT
-// $sql = "CREATE DATABASE catalogue";
-
-// * Liste variée comprenant des classiques et des titres modernes.
-$sql = "";
-
-// * sql SELECT
-$sql = "SELECT * FROM catalogue";
-
-// * préparation de la requête sql
-$query = $db->prepare($sql);
-
-// * exécution de la requête sql
-$query->execute();
-
-// * récupération des données de la requête sql
-$catalogue = $query->fetchAll(PDO::FETCH_ASSOC);
-
-// * afficher la table catalogue
-// print_r($catalogue);
-
-require "disconnect.php";
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +7,7 @@ require "disconnect.php";
     <!-- // - 2 - META -->
     <meta charset=utf-8>
     <meta content="width=device-width,initial-scale=1" name=viewport>
-    <link rel="icon" href="favicon.ico" type="image/x-svg">
+    <link rel="icon" href="img/favicon.ico" type="image/x-svg">
     <link rel="stylesheet" href="style.css">
     <!-- TITRE -->
     <title>Index_Jeux_Vidéos</title>
@@ -52,11 +24,6 @@ require "disconnect.php";
 
     <!-- // * Table catalogue -->
     <table style="border:1px solid black;">
-        <!-- <pre> -->
-        <?php
-        // print_r($catalogue)
-        ?>
-        <!-- </pre> -->
         <thead style="border:1px solid black;">
             <th style="border:1px solid black;">id</th>
             <th style="border:1px solid black;">jeu</th>
@@ -73,21 +40,25 @@ require "disconnect.php";
                 <td style="border:1px solid black;">no action</td>
             </tr>
 
-            <?php
-            foreach ($catalogue as $jeu): ?>
-
-                <tr>
-                    <td style="border:1px solid black;"><?= $jeu['id'] ?> </td>
-                    <td style="border:1px solid black;"><?= $jeu['jeu'] ?> </td>
-                    <td style="border:1px solid black;"><?= $jeu['genre'] ?> </td>
-                    <td style="border:1px solid black;"><?= $jeu['annee'] ?> </td>
-                    <td style="border:1px solid black;">
-                        <a style="border:1px solid black;" href="jeu.php?id=<?= $jeu['id'] ?>">Voir</a>
-                        <a style="border:1px solid black;" href="modifier.php?id=<?= $jeu['id'] ?>">Modifier</a>
-                        <a style="border:1px solid black;" href="supprimer.php?id=<?= $jeu['id'] ?>">Supprimer</a>
-                    </td>
-                </tr>
-            <?php endforeach ?>
+            <tr>
+                <td style="border:1px solid black;">
+                    test
+                </td>
+                <td style="border:1px solid black;">
+                    test
+                </td>
+                <td style="border:1px solid black;">
+                    test
+                </td>
+                <td style="border:1px solid black;">
+                    test
+                </td>
+                <td style="border:1px solid black;">
+                    <a style="border:1px solid black;" href="jeu.php">Voir</a>
+                    <a style="border:1px solid black;" href="modifier.php">Modifier</a>
+                    <a style="border:1px solid black;" href="supprimer.php">Supprimer</a>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -96,7 +67,6 @@ require "disconnect.php";
     <img width="10%" src="img/11919432.gif" alt="gif d'ajout d'utilisateur">
     <img width="10%" src="img/icon-256x256.gif" alt="gif d'ajout d'utilisateur">
     <br>
-    <br>
     <a href="./add.php"><button>Ajouter un jeu</button></a>
 
     <br><br>
@@ -104,11 +74,11 @@ require "disconnect.php";
     <hr />
 
     <div style="display: flex; justify-content:center;">
-        <?php echo "helluuuuu"; ?>
+        <p>test</p>
     </div>
 
     <div style="display: flex; justify-content:center;">
-        <?php echo "U"; ?>
+        <p>test</p>
     </div>
 
     <hr>
@@ -126,23 +96,13 @@ require "disconnect.php";
 
     <hr />
 
-    <?php
-
-    // Affiche toutes les infos, comme le ferait INFO_ALL
-    // phpinfo();
-
-    // Affiche uniquement le module d'infos.
-    // phpinfo(8) fournirait les mêmes infos.
-    // phpinfo(INFO_MODULES);
-
-    ?>
-
 </body>
 
-<!-- // * FOOTER -->
+<!-- * FOOTER -->
 <footer>
     <div class="droits">
-        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
+        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro |
+            Mentions légales</h6>
     </div>
 </footer>
 
