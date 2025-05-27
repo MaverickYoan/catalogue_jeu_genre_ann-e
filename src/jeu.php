@@ -63,7 +63,7 @@ if (
     <h1 style="border:1px solid black; background-color: black; color: white; width:fit-content">Jeu</h1>
     <h1 style="border:1px solid black; width:fit-content"><?= $jeu['jeu'] ?></h1>
     <h1 style="border:1px solid black; width:fit-content"><?= $jeu['genre'] ?></h1>
-    <h1 style="border:1px solid black; width:fit-content"><?= $jeu['annee'] ?></h1>
+    <!-- <h1 style="border:1px solid black; width:fit-content"><?= $jeu['annee'] ?></h1> -->
     <!-- <p>Jeu : Yo</p>
     <p>Nom : YDM</p> -->
 

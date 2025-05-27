@@ -110,7 +110,7 @@ if (
         <input type="text" Name="genre" id="genre" value="<?= $jeu["genre"] ?>" required>
         <label for="annee">annee</label>
         <!--// * Nous insérons la valeur de l'annee du game dans le champ genre -->
-        <input type="date" Name="annee" id="annee" value="<?= $jeu["annee"] ?>" required>
+        <input type="number" Name="annee" id="annee" value="<?= $jeu["annee"] ?>" required>
         <!--// * Champ caché -->
         <input type="hidden" name="id" value="<?= $jeu["id"] ?>">
         <input type="submit" value="Modifier">
