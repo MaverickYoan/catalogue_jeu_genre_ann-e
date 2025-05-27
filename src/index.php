@@ -1,11 +1,8 @@
 <?php
 require_once "connect.php";
 
-// * sql SELECT
+// * sql CREATE
 // $sql = "CREATE DATABASE catalogue";
-
-// * Liste variée comprenant des classiques et des titres modernes.
-$sql = "";
 
 // * sql SELECT
 $sql = "SELECT * FROM catalogue";
@@ -36,7 +33,7 @@ require "disconnect.php";
     <meta charset=utf-8>
     <meta content="width=device-width,initial-scale=1" name=viewport>
     <link rel="icon" href="src\favicon.ico" type="image/x-svg">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- TITRE -->
     <title>Index_Jeux_Vidéos</title>
 </head>
@@ -44,6 +41,19 @@ require "disconnect.php";
 <!-- BODY -->
 
 <body id="content" style="background-image: url(img/b3b48a35785465ed53f20d332f191a5c.gif);">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <ul class="nav-links" id="navLinks">
+            <li><a class="links" href="http://localhost:8000/home.html">home</a></li>
+            <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
+            <li><a class="links" href="http://localhost:8000/jeu.php">Jeu</a></li>
+            <li><a class="links" href="http://localhost:8000/liste.php">Liste de Jeux</a></li>
+            <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
+            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
+            <a href="/">Back to menu</a>
+        </ul>
+    </nav>
 
     <h1 style="border:1px solid black; background-color: black; color: white; width:fit-content">Index</h1>
     <p>créer table sql catalogue</p>
@@ -93,8 +103,7 @@ require "disconnect.php";
     </table>
 
     <br>
-    <img width="10%" src="img/11919432.gif" alt="gif d'ajout d'utilisateur">
-    <img width="10%" src="img/icon-256x256.gif" alt="gif d'ajout d'utilisateur">
+    <img width="10%" src="icon-256x256.gif" alt="gif d'ajout d'utilisateur">
     <br>
     <br>
     <a href="./add.php"><button>Ajouter un jeu</button></a>
@@ -113,18 +122,6 @@ require "disconnect.php";
 
     <hr>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <ul class="nav-links" id="navLinks">
-            <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
-            <li><a class="links" href="http://localhost:8000/jeu.php">Jeu</a></li>
-            <li><a class="links" href="http://localhost:8000/liste.php">Liste de Jeux</a></li>
-            <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
-            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
-            <a href="/">Back to menu</a>
-        </ul>
-    </nav>
-
     <hr />
 
     <?php
@@ -137,6 +134,7 @@ require "disconnect.php";
     // phpinfo(INFO_MODULES);
 
     ?>
+    <script src="script.js"></script>
 
 </body>
 
@@ -146,5 +144,14 @@ require "disconnect.php";
         <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
     </div>
 </footer>
+
+<!-- back-to-top section -------------->
+<a href="#content" class="back-to-top">
+    <span>top</span>
+    <!-- aria-hidden="true" opur masquer l'icon de l'écran -->
+    <svg width="10" height="10" viewbox=" 0 0 24 24" aria-hidden="true">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+    </svg>
 
 </html>

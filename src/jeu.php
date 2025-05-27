@@ -45,10 +45,11 @@ if (
         <title>Page de <?= $jeu['jeu'] ?></title>
 </head>
 
-<body style="background-image: url(img/icon-256x256.gif); background-repeat: no-repeat; background-position: center; background-size: 20%;">
+<body style="background-image: url(icon-256x256.gif); background-repeat: no-repeat; background-position: center; background-size: 20%;">
     <!-- NAVBAR -->
     <nav class="navbar">
         <ul class="nav-links" id="navLinks">
+            <li><a class="links" href="http://localhost:8000/home.html">home</a></li>
             <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
             <li><a class="links" href="http://localhost:8000/jeu.php">Jeu</a></li>
             <li><a class="links" href="http://localhost:8000/liste.php">Liste de Jeux</a></li>
@@ -58,13 +59,12 @@ if (
         </ul>
     </nav>
 
-    <hr />
-    <img width="10%" src="src\img\0Jvtfvy.gif" alt="Gran turismo 2 sur playstation">
+    <!-- <img width="10%" src="0Jvtfvy.gif" alt="Gran turismo 2 sur playstation"> -->
     <br>
     <h1 style="border:1px solid black; background-color: black; color: white; width:fit-content">Jeu</h1>
     <h1 style="border:1px solid black; width:fit-content"><?= $jeu['jeu'] ?></h1>
     <h1 style="border:1px solid black; width:fit-content"><?= $jeu['genre'] ?></h1>
-    <!-- <h1 style="border:1px solid black; width:fit-content"><?= $jeu['annee'] ?></h1> -->
+    <h1 style="border:1px solid black; width:fit-content"><?= $jeu['annee'] ?></h1>
     <!-- <p>Jeu : Yo</p>
     <p>Nom : YDM</p> -->
 

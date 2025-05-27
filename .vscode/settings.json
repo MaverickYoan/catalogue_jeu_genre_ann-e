@@ -7,5 +7,20 @@
         "8443": {
             "protocol": "https"
         }
-    }
+    },
+    "emmet.preferences": {
+        "output.selfClosingStyle": "xml",
+        "css.color.short": true,
+    },
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.suggest.preview": true,
+    "emmet.includeLanguages": {
+        "php": "html",
+        "javascript": "html",
+        "javascriptreact": "html",
+        "sql": "html",
+        "xml": "html"
+    },
+    "tailwindCSS.emmetCompletions": true,
+    "editor.wordWrap": "on"
 }
