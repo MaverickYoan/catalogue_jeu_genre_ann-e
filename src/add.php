@@ -5,24 +5,24 @@ if ($_POST) {
     if (
         isset($_POST["jeu"])
         && isset($_POST["genre"])
-        && isset($_POST["année"])
+        && isset($_POST["annee"])
         // * isset : est present même si vide; !empty oblige à inserer du contenu
         && !empty($_POST["jeu"])
         && !empty($_POST["genre"])
-        && !empty($_POST["année"])
+        && !empty($_POST["annee"])
     ) {
         // print_r(value: $_POST);
 
         // * Enlève les balises HTML et PHP des STRING
         $jeu = strip_tags($_POST["jeu"]);
         $genre = strip_tags($_POST["genre"]);
-        $genre = strip_tags($_POST["année"]);
+        $annee = strip_tags($_POST["annee"]);
 
         // * Check si connexion réussie
         require_once "connect.php";
 
         // * Requête SQL pour ajouter des données (finir le commentaire)
-        $sql = "INSERT INTO catalogue (jeu, genre, année) VALUES (:jeu, :genre, :année);";
+        $sql = "INSERT INTO catalogue (jeu, genre, annee) VALUES (:jeu, :genre, :annee);";
 
         // * préparation de la base de données SQL
         $query = $db->prepare($sql);
@@ -33,8 +33,8 @@ if ($_POST) {
         // * Rattacher les valeurs de bindValue genre à la requête SQL
         $query->bindValue(":genre", $genre, PDO::PARAM_STR);
 
-        // * Rattacher les valeurs de bindValue genre à la requête SQL
-        $query->bindValue(":année", $année, PDO::PARAM_STR);
+        // * Rattacher les valeurs de bindValue annee à la requête SQL
+        $query->bindValue(":annee", $annee, PDO::PARAM_INT);
 
         // * Exécution de la requête SQL
         $query->execute();
@@ -74,7 +74,7 @@ if ($_POST) {
     <nav class="navbar">
         <ul class="nav-links" id="navLinks">
             <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
-            <li><a class="links" href="http://localhost:8000/jeu.php">Game</a></li>
+            <li><a class="links" href="http://localhost:8000/jeu.php">Jeu</a></li>
             <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
             <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
             <a href="/">Back to menu</a>
@@ -85,12 +85,12 @@ if ($_POST) {
 
     <!-- post envoie en masquer un formulaire -->
     <form method="post">
-        <label for="jeu">Jeu</label>
+        <label for="jeu">jeu</label>
         <input type="text" Name="jeu" id="jeu" required>
-        <label for="genre">Genre</label>
+        <label for="genre">genre</label>
         <input type="text" Name="genre" id="genre" required>
-        <label for="année">Année</label>
-        <input type="text" Name="année" id="année" required>
+        <label for="annee">annee</label>
+        <input type="number" Name="annee" id="annee" required>
         <input type="submit" value="Ajouter">
     </form>
 

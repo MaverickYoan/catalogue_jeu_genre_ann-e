@@ -2,7 +2,7 @@
 require_once "connect.php";
 
 // * sql SELECT
-$sql = "CREATE DATABASE catalogue";
+// $sql = "CREATE DATABASE catalogue";
 
 // * sql SELECT
 $sql = "SELECT * FROM catalogue";
@@ -17,7 +17,7 @@ $query->execute();
 $catalogue = $query->fetchAll(PDO::FETCH_ASSOC);
 
 // * afficher la table catalogue
-// print_r($catalogue);
+print_r($catalogue);
 
 require "disconnect.php";
 ?>
@@ -35,7 +35,7 @@ require "disconnect.php";
     <link rel="icon" href="src/img/favicon.ico" type="image/x-svg">
     <link rel="stylesheet" href="style.css">
     <!-- TITRE -->
-    <title>Index_php_crud</title>
+    <title>Index_Jeux_Vidéos</title>
 </head>
 
 <!-- BODY -->
@@ -58,7 +58,7 @@ require "disconnect.php";
             <th style="border:1px solid black;">id</th>
             <th style="border:1px solid black;">jeu</th>
             <th style="border:1px solid black;">genre</th>
-            <th style="border:1px solid black;">Année</th>
+            <th style="border:1px solid black;">annee</th>
             <th style="border:1px solid black;">Actions</th>
         </thead>
         <tbody style="border:1px solid black;">
@@ -71,17 +71,17 @@ require "disconnect.php";
             </tr>
 
             <?php
-            foreach ($catalogue as $game): ?>
+            foreach ($catalogue as $jeu): ?>
 
                 <tr>
-                    <td style="border:1px solid black;"><?= $game['id'] ?> </td>
-                    <td style="border:1px solid black;"><?= $game['jeu'] ?> </td>
-                    <td style="border:1px solid black;"><?= $game['genre'] ?> </td>
-                    <td style="border:1px solid black;"><?= $game['année'] ?> </td>
+                    <td style="border:1px solid black;"><?= $jeu['id'] ?> </td>
+                    <td style="border:1px solid black;"><?= $jeu['jeu'] ?> </td>
+                    <td style="border:1px solid black;"><?= $jeu['genre'] ?> </td>
+                    <td style="border:1px solid black;"><?= $jeu['annee'] ?> </td>
                     <td style="border:1px solid black;">
-                        <a style="border:1px solid black;" href="game.php?id=<?= $game['id'] ?>">Voir</a>
-                        <a style="border:1px solid black;" href="modifier.php?id=<?= $game['id'] ?>">Modifier</a>
-                        <a style="border:1px solid black;" href="supprimer.php?id=<?= $game['id'] ?>">Supprimer</a>
+                        <a style="border:1px solid black;" href="game.php?id=<?= $jeu['id'] ?>">Voir</a>
+                        <a style="border:1px solid black;" href="modifier.php?id=<?= $jeu['id'] ?>">Modifier</a>
+                        <a style="border:1px solid black;" href="supprimer.php?id=<?= $jeu['id'] ?>">Supprimer</a>
                     </td>
                 </tr>
             <?php endforeach ?>
@@ -108,7 +108,7 @@ require "disconnect.php";
     <nav class="navbar">
         <ul class="nav-links" id="navLinks">
             <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
-            <li><a class="links" href="http://localhost:8000/jeu.php">Game</a></li>
+            <li><a class="links" href="http://localhost:8000/jeu.php">Jeu</a></li>
             <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
             <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
             <a href="/">Back to menu</a>

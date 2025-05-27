@@ -7,16 +7,16 @@ if ($_POST) {
     if (
         !empty($_POST["jeu"])
         && !empty($_POST["genre"])
-        && !empty($_POST["année"])
+        && !empty($_POST["annee"])
     ) {
         $id = filter_var($_POST["id"], FILTER_VALIDATE_INT);
         $jeu = htmlspecialchars(strip_tags($_POST["jeu"]));
         $genre = htmlspecialchars(strip_tags($_POST["genre"]));
-        $année = htmlspecialchars(strip_tags($_POST["année"]));
+        $annee = htmlspecialchars(strip_tags($_POST["annee"]));
 
         // * Mise à jour des données jeu et/ou genre
         $sql = "UPDATE catalogue
-        SET jeu = :jeu, genre = :genre, année = :année
+        SET jeu = :jeu, genre = :genre, annee = :annee
         WHERE id=:id;";
 
         $query = $db->prepare($sql);
@@ -31,7 +31,7 @@ if ($_POST) {
         $query->bindValue(":genre", $genre, PDO::PARAM_STR);
 
         // * Rattacher les valeurs de bindValue genre à la requête SQL
-        $query->bindValue(":année", $année, PDO::PARAM_STR);
+        $query->bindValue(":annee", $annee, PDO::PARAM_INT);
 
         // * Exécution de la requête SQL
         $query->execute();
@@ -66,8 +66,8 @@ if (
     // * exécution de la requête sql
     $query->execute();
 
-    $game = $query->fetch();
-    // print_r($game);
+    $jeu = $query->fetch();
+    // print_r($jeu);
 
     require "disconnect.php";
 }
@@ -91,7 +91,7 @@ if (
     <nav class="navbar">
         <ul class="nav-links" id="navLinks">
             <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
-            <li><a class="links" href="http://localhost:8000/jeu.php">Game</a></li>
+            <li><a class="links" href="http://localhost:8000/jeu.php">Jeu</a></li>
             <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
             <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
             <a href="/">Back to menu</a>
@@ -104,15 +104,15 @@ if (
     <form method="post">
         <label for="jeu">Jeu</label>
         <!--// * Nous insérons la valeur du Jeu du game dans le champ jeu -->
-        <input type="text" Name="jeu" id="jeu" value="<?= $game["jeu"] ?>" required>
+        <input type="text" Name="jeu" id="jeu" value="<?= $jeu["jeu"] ?>" required>
         <label for="genre">Genre</label>
         <!--// * Nous insérons la valeur du Genre du game dans le champ genre -->
-        <input type="text" Name="genre" id="genre" value="<?= $game["genre"] ?>" required>
-        <label for="année">Année</label>
-        <!--// * Nous insérons la valeur de l'Année du game dans le champ genre -->
-        <input type="text" Name="année" id="année" value="<?= $game["année"] ?>" required>
+        <input type="text" Name="genre" id="genre" value="<?= $jeu["genre"] ?>" required>
+        <label for="annee">annee</label>
+        <!--// * Nous insérons la valeur de l'annee du game dans le champ genre -->
+        <input type="date" Name="annee" id="annee" value="<?= $jeu["annee"] ?>" required>
         <!--// * Champ caché -->
-        <input type="hidden" name="id" value="<?= $game["id"] ?>">
+        <input type="hidden" name="id" value="<?= $jeu["id"] ?>">
         <input type="submit" value="Modifier">
     </form>
 

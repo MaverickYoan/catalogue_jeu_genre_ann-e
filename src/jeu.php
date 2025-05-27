@@ -20,8 +20,8 @@ if (
     // * exécution de la requête sql
     $query->execute();
 
-    $game = $query->fetch();
-    // print_r($game);
+    $jeu = $query->fetch();
+    // print_r($jeu);
 
     require "disconnect.php";
 }
@@ -39,10 +39,10 @@ if (
     <!-- TITRE -->
     <?php
     // * enlever le isset est possible, !empty evite l'option "utilisateur qui entre une id inexistante dans la BDD", isset ne l'évite pas *
-    if (isset($game) && !empty($game)):
-        // print_r($game);
+    if (isset($jeu) && !empty($jeu)):
+        // print_r($jeu);
     ?>
-        <title>Page de <?= $game['jeu'] ?></title>
+        <title>Page de <?= $jeu['jeu'] ?></title>
 </head>
 
 <body style="background-image: url(img/icon-256x256.gif); background-repeat: no-repeat; background-position: center; background-size: 20%;">
@@ -50,7 +50,7 @@ if (
     <nav class="navbar">
         <ul class="nav-links" id="navLinks">
             <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
-            <li><a class="links" href="http://localhost:8000/jeu.php">Game</a></li>
+            <li><a class="links" href="http://localhost:8000/jeu.php">Jeu</a></li>
             <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
             <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
             <a href="/">Back to menu</a>
@@ -61,9 +61,9 @@ if (
     <img width="10%" src="src\img\0Jvtfvy.gif" alt="Gran turismo 2 sur playstation">
     <br>
     <h1 style="border:1px solid black; background-color: black; color: white; width:fit-content">Jeu</h1>
-    <h1 style="border:1px solid black; width:fit-content"><?= $game['jeu'] ?></h1>
-    <h1 style="border:1px solid black; width:fit-content"><?= $game['genre'] ?></h1>
-    <h1 style="border:1px solid black; width:fit-content"><?= $game['année'] ?></h1>
+    <h1 style="border:1px solid black; width:fit-content"><?= $jeu['jeu'] ?></h1>
+    <h1 style="border:1px solid black; width:fit-content"><?= $jeu['genre'] ?></h1>
+    <h1 style="border:1px solid black; width:fit-content"><?= $jeu['annee'] ?></h1>
     <!-- <p>Jeu : Yo</p>
     <p>Nom : YDM</p> -->
 
