@@ -4,6 +4,9 @@ require_once "connect.php";
 // * sql SELECT
 // $sql = "CREATE DATABASE catalogue";
 
+// * Liste variée comprenant des classiques et des titres modernes.
+$sql = "";
+
 // * sql SELECT
 $sql = "SELECT * FROM catalogue";
 
