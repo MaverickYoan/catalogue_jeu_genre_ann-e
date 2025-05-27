@@ -1,4 +1,4 @@
-CREATE TABLE jeux_videos (
+CREATE TABLE jeux (
     id SERIAL PRIMARY KEY,
     jeu VARCHAR(255) NOT NULL,
     genre VARCHAR(100) NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE jeux_videos (
     editeur_id INT REFERENCES editeurs(id)
 );
 
-INSERT INTO jeux_videos (jeu, genre, annee, editeur_id) VALUES
+INSERT INTO jeux (jeu, genre, annee, editeur_id) VALUES
 ('The Legend of Zelda: Breath of the Wild', 'Action-aventure', 2017, 1),
 ('Cyberpunk 2077', 'RPG', 2020, 2),
 ('Hollow Knight', 'Metroidvania', 2017, 3),
