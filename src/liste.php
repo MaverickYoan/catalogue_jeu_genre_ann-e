@@ -56,6 +56,10 @@ require "disconnect.php";
 
     <h1 style="color:green; font-size:14px;">TABLE SQL jeux</h1>
 
+    <!-- <div class="test">
+        <p>ljsinsinjpvj,ô,ô,qô,ô,^,z</p>
+    </div> -->
+
     <!-- // * Table jeux -->
     <table style="border:1px solid white;">
         <!-- <pre> -->

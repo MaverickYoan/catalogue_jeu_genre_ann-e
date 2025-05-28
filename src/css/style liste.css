@@ -60,6 +60,12 @@ body {
     transition: 0.4s;
 }
 
+.test {
+    width: fit-content;
+    border: 10px solid green;
+}
+
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;

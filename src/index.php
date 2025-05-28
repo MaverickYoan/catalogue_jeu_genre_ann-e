@@ -19,6 +19,7 @@ $catalogue = $query->fetchAll(PDO::FETCH_ASSOC);
 // * afficher la table catalogue
 // print_r($catalogue);
 
+
 require "disconnect.php";
 ?>
 
@@ -122,6 +123,35 @@ require "disconnect.php";
 
     <hr>
 
+    <!-- * envoie email -->
+    <?php
+    // // Le message
+    // $message = "Line 1\r\nLine 2\r\nLine 3";
+
+    // // Dans le cas où nos lignes comportent plus de 70 caractères, nous les coupons en utilisant wordwrap()
+    // $message = wordwrap($message, 70, "\r\n");
+
+    // // Envoi du mail
+    // mail('yoan.demenzes@gmail.com', 'Mon Sujet', $message);
+    ?>
+    <?php
+    // $destinataire = array();
+    // $result = mysql_query("SELECT * FROM alerte_chat_benin");
+    // while ($reponse = mysql_fetch_array($result)) {
+    //     $destinataire[] = $reponse['champ_mail'];
+    // }
+
+    // $mail = "projetbenin@gmail.com";
+    // $objet = "objet du mail";
+    // $contenu = 'contenu du mail';
+
+    // $headers = 'From: ' . $mail . "\r\n";
+    // $headers .= 'MIME-Version: 1.0' . "\r\n";
+    // $headers .= 'Content-Type: text/html; charset="iso-8859-1"' . "\n";
+    // $headers .= 'Content-Transfer-Encoding: 8bit';
+
+    // $mail_envoye = @mail(implode(';', $destinataire), $objet, $contenu, $headers);
+    ?>
     <hr />
 
     <?php
