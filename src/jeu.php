@@ -36,6 +36,8 @@ if (
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.ico" type="image/x-svg">
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- TITRE -->
     <?php
     // * enlever le isset est possible, !empty evite l'option "utilisateur qui entre une id inexistante dans la BDD", isset ne l'évite pas *
@@ -88,6 +90,6 @@ if (
 
 </body>
 
-<script src="script/script.js"></script>
+<script src="script.js"></script>
 
 </html>

@@ -35,6 +35,8 @@ require "disconnect.php";
     <meta content="width=device-width,initial-scale=1" name=viewport>
     <link rel="icon" href="src\favicon.ico" type="image/x-svg">
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="script.js"></script>
+
     <!-- TITRE -->
     <title>Index_Jeux_Vidéos</title>
 </head>
@@ -52,9 +54,9 @@ require "disconnect.php";
             <li><a class="links" href="http://localhost:8000/liste.php">Liste de Jeux</a></li>
             <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
             <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
-            <li><a class="links" href="/">Back to menu</a></li>
         </ul>
     </nav>
+    <li><a class="links" href="/">Back to menu</a></li>
 
     <h1 style="border:1px solid black; background-color: black; color: white; width:fit-content">Index</h1>
     <p>créer table sql catalogue</p>
@@ -179,8 +181,6 @@ require "disconnect.php";
             <path d="M5 12h14" />
             <path d="m12 5 7 7-7 7" />
         </svg>
-
-        <script src="script/script.js"></script>
 
 </body>
 

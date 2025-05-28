@@ -151,7 +151,7 @@ require "disconnect.php";
             <path d="m12 5 7 7-7 7" />
         </svg>
 
-        <script src="script/script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
 
 </body>
 
