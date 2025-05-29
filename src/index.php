@@ -5,7 +5,7 @@ require_once "connect.php";
 // $sql = "CREATE DATABASE catalogue";
 
 // * sql SELECT
-$sql = "SELECT * FROM jeux";
+$sql = "SELECT * FROM catalogue";
 
 // * préparation de la requête sql
 $query = $db->prepare($sql);
