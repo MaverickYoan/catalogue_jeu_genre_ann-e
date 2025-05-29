@@ -11,7 +11,7 @@ if (
     // print_r($id);
 
     // * sql SELECT
-    $sql = "SELECT * FROM catalogue WHERE id = :id";
+    $sql = "SELECT * FROM jeux WHERE id = :id";
 
     // * préparation de la requête sql
     $query = $db->prepare($sql);

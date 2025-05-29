@@ -15,7 +15,7 @@ if ($_POST) {
         $annee = htmlspecialchars(strip_tags($_POST["annee"]));
 
         // * Mise à jour des données jeu et/ou genre
-        $sql = "UPDATE catalogue
+        $sql = "UPDATE jeux
         SET jeu = :jeu, genre = :genre, annee = :annee
         WHERE id=:id;";
 
