@@ -67,6 +67,7 @@ if (
     <h1 style="border:1px solid black; width:fit-content"><?= $jeu['jeu'] ?></h1>
     <h1 style="border:1px solid black; width:fit-content"><?= $jeu['genre'] ?></h1>
     <h1 style="border:1px solid black; width:fit-content"><?= $jeu['annee'] ?></h1>
+    <img src="img/liste" alt="" />
     <!-- <p>Jeu : Yo</p>
     <p>Nom : YDM</p> -->
 
