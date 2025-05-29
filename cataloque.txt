@@ -10,7 +10,7 @@ gestion de catégorie de produit
 
 administrations de données add.modif.suppr derrière un mot de passe 
 
-
+https://drive.google.com/file/d/1EXEcJ5wKyqOM4oFT-7hH9bMHqSmf1ho9/view?usp=sharing, https://drive.google.com/file/d/1J61kYfJyiEzw7kKE4QUi2O0H_7ialJBT/view?usp=sharing, https://drive.google.com/file/d/1T5ePOfrMA6p1CcrgC82rYcyDofH_PYf5/view?usp=sharing, https://drive.google.com/file/d/1npFRFyBv1-yZTNZTPe0clnDm_3qU4DPN/view?usp=sharing, https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221rjqpfVZzvbRFb6E4-alpi109-YuZ1Bax%22%5D,%22action%22:%22open%22,%22userId%22:%22106144153507521780313%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing, https://drive.google.com/file/d/1zevhNOJBMIpBsJ32KOJzpPaZMsbhsK3u/view?usp=sharing
 
 9 juin férié
 10 juin

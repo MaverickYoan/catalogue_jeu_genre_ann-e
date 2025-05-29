@@ -2,7 +2,7 @@
 require_once "connect.php";
 
 // * sql CREATE
-// $sql = "CREATE DATABASE catalogue";
+$sql = "CREATE DATABASE catalogue";
 
 // * sql SELECT
 $sql = "SELECT * FROM catalogue";
