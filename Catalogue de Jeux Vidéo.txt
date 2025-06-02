@@ -1,0 +1,30 @@
+projet catalogue au choix 
+
+page accueil
+
+page choix des produits 
+
+ajouter des catégorie de produits avec une deuxième table 
+
+gestion de catégorie de produit 
+
+administrations de données add.modif.suppr derrière un mot de passe 
+
+
+
+9 juin férié
+10 juin
+
+__________________________________
+
+
+
+
+
+
+
+
+
+
+
+
