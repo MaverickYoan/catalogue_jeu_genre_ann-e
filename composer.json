@@ -29,6 +29,6 @@
         "ext-xmlwriter": "*",
         "ext-session": "*",
         "ext-redis": "*",
-        "ext-zip": "*",
+        "ext-zip": "*"
     }
 }
