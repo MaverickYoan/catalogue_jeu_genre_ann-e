@@ -39,3 +39,4 @@ services:
       - ./data/servers.json:/pgadmin4/servers.json
     depends_on:
       - db
+ 
