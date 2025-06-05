@@ -1,6 +1,7 @@
 # Starter Kit Docker PHP-PostgreSQL
 
 Ce starter kit vous permet de démarrer rapidement un projet PHP avec une base de données PostgreSQL et pgAdmin, le tout conteneurisé avec Docker.
+_______________________________________________________________________________
 
 ## Prérequis
 
@@ -12,6 +13,7 @@ Ce starter kit vous permet de démarrer rapidement un projet PHP avec une base d
     docker --version
     docker compose version
     ```
+_______________________________________________________________________________
 
 ## Structure du projet
 
@@ -46,8 +48,10 @@ Le projet inclut trois services Docker :
    - Accessible sur `http://localhost:8082`
    - Email : <admin@admin.com>
    - Mot de passe : admin
+_______________________________________________________________________________
 
 ## Démarrage rapide
+_______________________________________________________________________________
 
 ### Première utilisation
 
@@ -75,6 +79,7 @@ Le projet inclut trois services Docker :
 5. Accédez à votre application :
    - Application PHP : <http://localhost:8000>
    - pgAdmin : <http://localhost:8080>
+_______________________________________________________________________________
 
 ### Utilisations suivantes
 
@@ -101,6 +106,7 @@ Le projet inclut trois services Docker :
 > docker compose down -v  # Arrête les containers et supprime les volumes
 > docker compose up -d    # Redémarre les containers et réinitialise la base de données
 > ```
+_______________________________________________________________________________
 
 ## Base de données
 
@@ -123,6 +129,7 @@ Le projet inclut trois services Docker :
      ```
 
 - Les données sont persistantes entre les redémarrages des containers, donc le script `data.sql` ne sera exécuté qu'à la première initialisation
+_______________________________________________________________________________
 
 ## Développement
 
@@ -131,6 +138,7 @@ Le projet inclut trois services Docker :
 3. Pour les modifications de la base de données :
    - Utilisez pgAdmin (<http://localhost:8082>)
    - Ou modifiez directement le fichier `data/data.sql`
+_______________________________________________________________________________
 
 ## Commandes utiles
 
@@ -141,15 +149,23 @@ docker compose up -d
 # Arrêter les containers
 docker compose down
 ```
+_______________________________________________________________________________
 
 ## Extensions PHP installées
 
 - pgsql
 - pdo
 - pdo_pgsql
+_______________________________________________________________________________
 
 ## Personnalisation
 
 - Modifier les ports dans `docker-compose.yml` si nécessaire
 - Ajouter des extensions PHP dans le `Dockerfile`
 - Modifier les credentials de la base de données dans `docker-compose.yml`
+_______________________________________________________________________________
+
+## Netlify 
+
+- Status du badge de déploiement : 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/17baecc5-35cc-4688-bb62-826b38e8492a/deploy-status)](https://app.netlify.com/projects/fabulous-platypus-fdb4a3/deploys)
