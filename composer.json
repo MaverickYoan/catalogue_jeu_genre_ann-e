@@ -1,5 +1,9 @@
 {
      "require": {
+        "phar://composer.phar/bin/composer": "2.6.0",
+        "phpunit/phpunit": "^10.4",
+        "phpunit/php-invoker": "^3.0",
+        "phpunit/php-text-template": "^2.0",
         "php": ">=8.2.12",
         "ext-bcmath": "*",
         "ext-json": "*",
