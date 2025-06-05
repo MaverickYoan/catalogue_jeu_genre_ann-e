@@ -24,7 +24,9 @@
     "tailwindCSS.emmetCompletions": true,
     "editor.wordWrap": "on",
     "cSpell.words": [
+        "bcmath",
         "création",
+        "ctype",
         "d'initialisation",
         "dans",
         "données",
@@ -34,12 +36,18 @@
         "fichiers",
         "incrémenter",
         "initdb",
+        "mbstring",
         "partir",
         "pgadmin",
+        "pgsql",
         "PGUSER",
         "problèmes",
         "projet",
         "résoudre",
-        "utilisé"
+        "simplexml",
+        "sqlsrv",
+        "utilisé",
+        "xmlreader",
+        "xmlwriter"
     ]
 }
