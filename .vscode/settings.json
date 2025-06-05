@@ -22,5 +22,24 @@
         "xml": "html"
     },
     "tailwindCSS.emmetCompletions": true,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "cSpell.words": [
+        "création",
+        "d'initialisation",
+        "dans",
+        "données",
+        "dpage",
+        "externes",
+        "fichier",
+        "fichiers",
+        "incrémenter",
+        "initdb",
+        "partir",
+        "pgadmin",
+        "PGUSER",
+        "problèmes",
+        "projet",
+        "résoudre",
+        "utilisé"
+    ]
 }
