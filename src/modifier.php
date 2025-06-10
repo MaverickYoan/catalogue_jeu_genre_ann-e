@@ -96,6 +96,7 @@ if (
             <li><a href="http://localhost:8001/index.php">Index</a></li>
             <li><a href="http://localhost:8001/liste.php">Liste de Jeux</a></li>
             <li><a href="http://localhost:8001/jeu.php">Jeu</a></li>
+            <li><a href="https://fabulous-platypus-fdb4a3.netlify.app/">Wink</a></li>
             <li><a href="http://localhost:8001/add.php">Ajout jeu</a></li>
             <li><a href="http://localhost:8001/modifier.php">Modifier jeu</a></li>
             <li><a href="http://localhost:8001/home.php">Back to menu</a></li>

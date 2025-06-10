@@ -360,6 +360,7 @@
             <li><a href="http://localhost:8001/index.php">Index</a></li>
             <li><a href="http://localhost:8001/liste.php">Liste de Jeux</a></li>
             <li><a href="http://localhost:8001/jeu.php">Jeu</a></li>
+            <li><a href="https://fabulous-platypus-fdb4a3.netlify.app/">Wink</a></li>
             <li><a href="http://localhost:8001/add.php">Ajout jeu</a></li>
             <li><a href="http://localhost:8001/modifier.php">Modifier jeu</a></li>
             <li><a href="http://localhost:8001/home.php">Back to menu</a></li>
@@ -402,7 +403,67 @@
         <button class="add-game-btn" onclick="openModal()">+ Ajouter un jeu</button>
 
         <div class="games-grid" id="gamesGrid">
-            <!-- Les jeux seront affichés ici -->
+            <?php
+            // Exemple de jeux (à remplacer par une récupération depuis une base de données si besoin)
+            $games = [
+                [
+                    'id' => 1,
+                    'name' => "The Legend of Zelda: Breath of the Wild",
+                    'genre' => "Aventure",
+                    'year' => 2017,
+                    'description' => "Un jeu d'aventure en monde ouvert révolutionnaire qui redéfinit la série Zelda."
+                ],
+                [
+                    'id' => 2,
+                    'name' => "God of War",
+                    'genre' => "Action",
+                    'year' => 2018,
+                    'description' => "L'épopée de Kratos et son fils Atreus dans la mythologie nordique."
+                ],
+                [
+                    'id' => 3,
+                    'name' => "The Witcher 3: Wild Hunt",
+                    'genre' => "RPG",
+                    'year' => 2015,
+                    'description' => "Un RPG épique suivant les aventures de Geralt de Riv."
+                ],
+                [
+                    'id' => 4,
+                    'name' => "Civilization VI",
+                    'genre' => "Strategie",
+                    'year' => 2016,
+                    'description' => "Construisez un empire qui résistera à l'épreuve du temps."
+                ],
+                [
+                    'id' => 5,
+                    'name' => "FIFA 23",
+                    'genre' => "Sport",
+                    'year' => 2022,
+                    'description' => "Le jeu de football le plus réaliste avec les dernières équipes et joueurs."
+                ],
+                [
+                    'id' => 6,
+                    'name' => "GRID Legends",
+                    'genre' => "Course",
+                    'year' => 2022,
+                    'description' => "GRID Legends vous propose de participer à des courses automobiles débridées et passionnantes aux quatre coins du monde."
+                ]
+            ];
+
+            foreach ($games as $game): ?>
+                <div class="game-card">
+                    <div class="game-title"><?= htmlspecialchars($game['name']) ?></div>
+                    <div class="game-info">
+                        <span class="genre-tag"><?= htmlspecialchars($game['genre']) ?></span>
+                        <span class="year-badge"><?= htmlspecialchars($game['year']) ?></span>
+                    </div>
+                    <div class="game-description"><?= htmlspecialchars($game['description']) ?></div>
+                    <div class="game-actions">
+                        <button class="btn btn-edit" onclick="editGame(<?= $game['id'] ?>)">Modifier</button>
+                        <button class="btn btn-delete" onclick="deleteGame(<?= $game['id'] ?>)">Supprimer</button>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
 
         <!-- Modal pour ajouter/modifier un jeu -->

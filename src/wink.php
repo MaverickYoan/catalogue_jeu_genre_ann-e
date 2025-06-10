@@ -727,17 +727,18 @@
             <div class="bar"></div>
         </div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="http://localhost:8001/home.php">home</a></li>
-            <li><a href="http://localhost:8001/jeux.php">Jeux</a></li>
-            <li><a href="http://localhost:8001/index.php">Index</a></li>
-            <li><a href="http://localhost:8001/liste.php">Liste de Jeux</a></li>
-            <li><a href="http://localhost:8001/jeu.php">Jeu</a></li>
-            <li><a href="http://localhost:8001/add.php">Ajout jeu</a></li>
-            <li><a href="http://localhost:8001/modifier.php">Modifier jeu</a></li>
+            <a href="#home">Accueil</a>
+            <a href="#about">À propos</a>
+            <li><a href="#catalog">Catalogue</a></li>
+            <li><a href="#images">Gestion des images</a></li>
+            <li><a href="#admin">Administration</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="http://localhost:8001/wink.php#projet">Projet</a></li>
             <li><a href="http://localhost:8001/home.php">Back to menu</a></li>
         </ul>
     </nav>
     </header>
+    <a href="http://localhost:8001/home.php">Back to menu</a>
 
     <main>
         <section id="home" class="active" aria-label="Accueil">
@@ -888,17 +889,17 @@
 
     <script>
         // Navigation
-        // const navButtons = document.querySelectorAll('nav button');
-        // const sections = document.querySelectorAll('main section');
+        const navButtons = document.querySelectorAll('nav button');
+        const sections = document.querySelectorAll('main section');
 
-        // navButtons.forEach(btn => {
-        //     btn.addEventListener('click', () => {
-        //         navButtons.forEach(b => b.classList.remove('active'));
-        //         btn.classList.add('active');
-        //         const page = btn.dataset.page;
-        //         sections.forEach(s => s.classList.toggle('active', s.id === page));
-        //     });
-        // });
+        navButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                navButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const page = btn.dataset.page;
+                sections.forEach(s => s.classList.toggle('active', s.id === page));
+            });
+        });
 
         // * script mobile menu
         document.getElementById('hamburgerMenu').addEventListener('click', function() {
