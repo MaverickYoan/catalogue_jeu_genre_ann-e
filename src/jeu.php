@@ -76,7 +76,7 @@ if (
 ?>
 
     <p>jeu non présent</p>
-    <a href="/">Back to menu</a>
+    <a href="http://localhost:8001/home.html">Back to menu</a>
 
 <?php
     endif;
@@ -85,7 +85,7 @@ if (
 <!-- // * FOOTER -->
 <footer>
     <div class="droits">
-        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
+        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
     </div>
 </footer>
 

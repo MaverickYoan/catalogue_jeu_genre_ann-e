@@ -10,6 +10,7 @@ $sql = "SELECT * FROM catalogue";
 // * préparation de la requête sql
 $query = $db->prepare($sql);
 
+$query->bindValue(':id', $id, PDO::PARAM_INT);
 // * exécution de la requête sql
 $query->execute();
 
@@ -17,7 +18,7 @@ $query->execute();
 $catalogue = $query->fetchAll(PDO::FETCH_ASSOC);
 
 // * afficher la table catalogue
-print_r($catalogue);
+// print_r($catalogue);
 
 
 require "disconnect.php";
@@ -169,7 +170,7 @@ require "disconnect.php";
     <!-- // * FOOTER -->
     <footer>
         <div class="droits">
-            <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
+            <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
         </div>
     </footer>
 

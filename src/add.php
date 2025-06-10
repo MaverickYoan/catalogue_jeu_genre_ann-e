@@ -11,7 +11,7 @@ if ($_POST) {
         && !empty($_POST["genre"])
         && !empty($_POST["annee"])
     ) {
-        // print_r(value: $_POST);
+        print_r(value: $_POST);
 
         // * Enlève les balises HTML et PHP des STRING
         $jeu = strip_tags($_POST["jeu"]);
@@ -40,7 +40,7 @@ if ($_POST) {
         $query->execute();
 
         // * récupération des données de la requête sql
-        // $catalogue = $query->fetchAll(PDO::FETCH_ASSOC);
+        $catalogue = $query->fetchAll(PDO::FETCH_ASSOC);
 
         // * close de la fonction connexion réussie
         require "disconnect.php";
@@ -53,7 +53,6 @@ if ($_POST) {
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,12 +69,12 @@ if ($_POST) {
     <!-- NAVBAR -->
     <nav class="navbar">
         <ul class="nav-links" id="navLinks">
-            <li><a class="links" href="http://localhost:8000/home.html">home</a></li>
-            <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
-            <li><a class="links" href="http://localhost:8000/jeu.php">Jeu</a></li>
-            <li><a class="links" href="http://localhost:8000/liste.php">Liste de Jeux</a></li>
-            <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
-            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
+            <li><a class="links" href="http://localhost:8001/home.html">home</a></li>            
+            <li><a class="links" href="http://localhost:8001/index.php">Index</a></li>
+            <li><a class="links" href="http://localhost:8001/jeu.php">Jeu</a></li>
+            <li><a class="links" href="http://localhost:8001/liste.php">Liste de Jeux</a></li>
+            <li><a class="links" href="http://localhost:8001/add.php">Ajout jeu</a></li>
+            <li><a class="links" href="http://localhost:8001/modifier.php">Modifier jeu</a></li>
             <li><a class="links" href="/">Back to menu</a></li>
         </ul>
     </nav>
@@ -88,6 +87,8 @@ if ($_POST) {
         <input type="text" Name="jeu" id="jeu" required>
         <label for="genre">genre</label>
         <input type="text" Name="genre" id="genre" required>
+        <label for="editeur_id">editeur_id</label>
+        <input type="number" Name="editeur_id" id="editeur_id" required>
         <label for="annee">annee</label>
         <input type="number" Name="annee" id="annee" required>
         <input type="submit" value="Ajouter">
@@ -98,7 +99,7 @@ if ($_POST) {
 <!-- // * FOOTER -->
 <footer>
     <div class="droits">
-        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_catalogue_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
+        <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
     </div>
 </footer>
 
