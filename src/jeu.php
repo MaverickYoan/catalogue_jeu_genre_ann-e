@@ -56,7 +56,7 @@ if (
         </div>
         <ul class="nav-links" id="navLinks">
             <li><a href="http://localhost:8001/home.php">home</a></li>
-            <li><a href="http://localhost:8001/jeux.html">Jeux</a></li>
+            <li><a href="http://localhost:8001/jeux.php">Jeux</a></li>
             <li><a href="http://localhost:8001/index.php">Index</a></li>
             <li><a href="http://localhost:8001/liste.php">Liste de Jeux</a></li>
             <li><a href="http://localhost:8001/jeu.php">Jeu</a></li>
@@ -72,6 +72,7 @@ if (
     <h1 style="border:1px solid black; width:fit-content"><?= $jeu['jeu'] ?></h1>
     <h1 style="border:1px solid black; width:fit-content"><?= $jeu['genre'] ?></h1>
     <h1 style="border:1px solid black; width:fit-content"><?= $jeu['annee'] ?></h1>
+    <h1 style="border:1px solid black; width:fit-content"><?= $jeu['editeur_id'] ?></h1>
     <img src="img/liste" alt="" />
     <!-- <p>Jeu : Yo</p>
     <p>Nom : YDM</p> -->
