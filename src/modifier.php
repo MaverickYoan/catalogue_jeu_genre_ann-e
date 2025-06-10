@@ -91,7 +91,7 @@ if (
             <div class="bar"></div>
         </div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="http://localhost:8001/home.html">home</a></li>
+            <li><a href="http://localhost:8001/home.php">home</a></li>
             <li><a href="http://localhost:8001/jeux.html">Jeux</a></li>
             <li><a href="http://localhost:8001/index.php">Index</a></li>
             <li><a href="http://localhost:8001/liste.php">Liste de Jeux</a></li>

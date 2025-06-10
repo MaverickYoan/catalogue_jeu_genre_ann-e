@@ -42,7 +42,11 @@ body {
 .nav-links li {
     margin-left: 20px;
 }
-
+#link {
+    color: rgb(204, 0, 255);
+    font-weight: 700;
+    text-decoration: none;
+}
 /* * .nav-links & a - margin */
 .nav-links a {
     color: rgb(204, 0, 255);

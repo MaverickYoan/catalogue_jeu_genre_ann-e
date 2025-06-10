@@ -55,7 +55,7 @@ if (
             <div class="bar"></div>
         </div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="http://localhost:8001/home.html">home</a></li>
+            <li><a href="http://localhost:8001/home.php">home</a></li>
             <li><a href="http://localhost:8001/jeux.html">Jeux</a></li>
             <li><a href="http://localhost:8001/index.php">Index</a></li>
             <li><a href="http://localhost:8001/liste.php">Liste de Jeux</a></li>
@@ -81,7 +81,7 @@ if (
 ?>
 
     <p>jeu non présent</p>
-    <a href="http://localhost:8001/home.html">Back to menu</a>
+    <a href="http://localhost:8001/home.php">Back to menu</a>
 
 <?php
     endif;

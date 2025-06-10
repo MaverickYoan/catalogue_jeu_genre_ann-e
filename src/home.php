@@ -19,7 +19,6 @@ $jeux = $query->fetchAll(PDO::FETCH_ASSOC);
 require "disconnect.php";
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,13 +28,13 @@ require "disconnect.php";
     <!-- // - 2 - META -->
     <meta charset=utf-8>
     <meta content="width=device-width,initial-scale=1" name=viewport>
-    <link rel="icon" href="src\favicon.ico" type="image/x-svg">
-    <link rel="stylesheet" href="css/style liste.css">
+    <link rel="icon" href="favicon.ico" type="image/x-svg">
+    <link rel="stylesheet" href="css/style.css">
     <!-- TITRE -->
     <title>Index_Jeux_Vidéos</title>
 </head>
 
-<!-- BODY  style="background-image: url(b3b48a35785465ed53f20d332f191a5c.gif);-->
+<!-- BODY -->
 
 <body id="content"><!-- NAVBAR -->
     <nav class="navbar">
@@ -55,17 +54,15 @@ require "disconnect.php";
             <li><a class="links" href="/">Back to menu</a></li>
         </ul>
     </nav>
+    </nav>
+    <li><a class="links" href="/">Back to menu</a></li>
 
-    <h1 style="border:1px solid black; background-color: black; color: white; width:fit-content">Index</h1>
-    <p>créer table sql jeux</p>
+    <h1 style="background-color: black; color: white; width:fit-content">Index</h1>
+    <p>créer table sql catalogue</p>
 
-    <h1 style="color:green; font-size:14px;">TABLE SQL jeux</h1>
+    <h1 style="color:green; font-size:14px;">TABLE SQL catalogue</h1>
 
-    <!-- <div class="test">
-        <p>ljsinsinjpvj,ô,ô,qô,ô,^,z</p>
-    </div> -->
-
-    <!-- // * Table jeux -->
+    <!-- // * Table catalogue -->
     <table style="border:1px solid white;">
         <!-- <pre> -->
         <?php
@@ -100,9 +97,9 @@ require "disconnect.php";
                     <td style="border:1px solid white;"><?= $jeu['annee'] ?> </td>
                     <td style="border:1px solid white;"><?= $jeu['editeur_id'] ?> </td>
                     <td style="border:1px solid white;">
-                        <a  id="link" style="border:1px solid white;" href="jeu.php?id=<?= $jeu['id'] ?>">Voir</a>
-                        <a  id="link" style="border:1px solid white;" href="modifier.php?id=<?= $jeu['id'] ?>">Modifier</a>
-                        <a  id="link" style="border:1px solid white;" href="supprimer.php?id=<?= $jeu['id'] ?>">Supprimer</a>
+                        <a href="jeu.php?id=<?= $jeu['id'] ?>">Voir</a>
+                        <a href="modifier.php?id=<?= $jeu['id'] ?>">Modifier</a>
+                        <a href="supprimer.php?id=<?= $jeu['id'] ?>">Supprimer</a>
                     </td>
                 </tr>
             <?php endforeach ?>
@@ -111,55 +108,30 @@ require "disconnect.php";
     </table>
 
     <br>
-    <img width="10%" src="img/icon-256x256.gif" alt="gif d'ajout d'utilisateur">
+    <img width="10%" src="comparaison-animation-gif-transparent.gif" alt="gif de la terre">
     <br>
     <br>
     <a href="./add.php"><button>Ajouter un jeu</button></a>
 
-    <br><br>
-
-    <hr />
-
-    <div style="display: flex; justify-content:center;">
-        <?php echo "helluuuuu"; ?>
-    </div>
-
-    <div style="display: flex; justify-content:center;">
-        <?php echo "U"; ?>
-    </div>
-
-    <hr>
-
-    <hr />
-
-    <?php
-
-    // Affiche toutes les infos, comme le ferait INFO_ALL
-    // phpinfo();
-
-    // Affiche uniquement le module d'infos.
-    // phpinfo(8) fournirait les mêmes infos.
-    // phpinfo(INFO_MODULES);
-
-    ?>
-
-    <!-- // * FOOTER -->
+    <!-- * FOOTER -->
     <footer>
         <div class="droits">
-            <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_jeux_Vidéos | @onlineformapro | Mentions légales</h6>
+            <h6 style="display: flex; justify-content:center;">&copy; 2025 Projet_jeux_Vidéos |
+                @onlineformapro |
+                Mentions légales</h6>
         </div>
     </footer>
 
     <!-- back-to-top section -------------->
-    <a href="#content" class="back-to-top">
-        <span>top</span>
-        <!-- aria-hidden="true" opur masquer l'icon de l'écran -->
-        <svg width="10" height="10" viewbox=" 0 0 24 24" aria-hidden="true">
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-        </svg>
+    <!-- <a href="#content" class="back-to-top">
+    <span>top</span>
+    aria-hidden="true" opur masquer l'icon de l'écran
+    <svg width="10" height="10" viewbox=" 0 0 24 24" aria-hidden="true">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" /> -->
+    <!-- </svg> -->
 
-        <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

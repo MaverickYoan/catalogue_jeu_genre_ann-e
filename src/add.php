@@ -4,10 +4,12 @@ if ($_POST) {
     // * Est-ce que les champs de formulaire sont définis
     if (
         isset($_POST["jeu"])
+        && isset($_POST["id"])
         && isset($_POST["genre"])
         && isset($_POST["annee"])
         && isset($_POST["editeur_id"])
         // * isset : est present même si vide; !empty oblige à inserer du contenu
+        && !empty($_POST["id"])
         && !empty($_POST["jeu"])
         && !empty($_POST["genre"])
         && !empty($_POST["annee"])
@@ -16,16 +18,17 @@ if ($_POST) {
         print_r(value: $_POST);
 
         // * Enlève les balises HTML et PHP des STRING
+        $id = strip_tags($_POST["id"]);
         $jeu = strip_tags($_POST["jeu"]);
         $genre = strip_tags($_POST["genre"]);
         $annee = strip_tags($_POST["annee"]);
-        $annee = strip_tags($_POST["editeur_id"]);
+        $editeur_id = strip_tags($_POST["editeur_id"]);
 
         // * Check si connexion réussie
         require_once "connect.php";
 
         // * Requête SQL pour ajouter des données (finir le commentaire)
-        $sql = "INSERT INTO catalogue (jeu, genre, annee, editeur_id) VALUES (:jeu, :genre, :annee, :editeur_id);";
+        $sql = "INSERT INTO catalogue (id, jeu, genre, annee, editeur_id) VALUES (:id, :jeu, :genre, :annee, :editeur_id);";
 
         // * préparation de la base de données SQL
         $query = $db->prepare($sql);
@@ -39,8 +42,8 @@ if ($_POST) {
         // * Rattacher les valeurs de bindValue annee à la requête SQL
         $query->bindValue(":annee", $annee, PDO::PARAM_INT);
 
-        // * Rattacher les valeurs de bindValue annee à la requête SQL
-        $query->bindValue(":editeur_id", $annee, PDO::PARAM_INT);
+        // * Rattacher les valeurs de bindValue editeur_id à la requête SQL
+        $query->bindValue(":editeur_id", $editeur_id, PDO::PARAM_INT);
 
         // * Exécution de la requête SQL
         $query->execute();
@@ -79,7 +82,7 @@ if ($_POST) {
             <div class="bar"></div>
         </div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="http://localhost:8001/home.html">home</a></li>
+            <li><a href="http://localhost:8001/home.php">home</a></li>
             <li><a href="http://localhost:8001/jeux.html">Jeux</a></li>
             <li><a href="http://localhost:8001/index.php">Index</a></li>
             <li><a href="http://localhost:8001/liste.php">Liste de Jeux</a></li>

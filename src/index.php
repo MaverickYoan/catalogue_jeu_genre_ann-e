@@ -10,7 +10,7 @@ $sql = "SELECT * FROM catalogue";
 // * préparation de la requête sql
 $query = $db->prepare($sql);
 
-$query->bindValue(':id', $id, PDO::PARAM_INT);
+// $query->bindValue(':id', $id, PDO::PARAM_INT);
 // * exécution de la requête sql
 $query->execute();
 
@@ -52,7 +52,7 @@ require "disconnect.php";
             <div class="bar"></div>
         </div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="http://localhost:8001/home.html">home</a></li>
+            <li><a href="http://localhost:8001/home.php">home</a></li>
             <li><a href="http://localhost:8001/jeux.html">Jeux</a></li>
             <li><a href="http://localhost:8001/index.php">Index</a></li>
             <li><a href="http://localhost:8001/liste.php">Liste de Jeux</a></li>
@@ -64,7 +64,7 @@ require "disconnect.php";
     </nav>
     <li><a class="links" href="/">Back to menu</a></li>
 
-    <h1 style="border:1px solid black; background-color: black; color: white; width:fit-content">Index</h1>
+    <h1 style="background-color: black; color: white; width:fit-content">Indexds</h1>
     <p>créer table sql catalogue</p>
 
     <h1 style="color:green; font-size:14px;">TABLE SQL catalogue</h1>
