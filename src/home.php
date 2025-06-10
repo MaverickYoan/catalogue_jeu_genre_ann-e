@@ -51,11 +51,11 @@ require "disconnect.php";
             <li><a href="http://localhost:8001/jeu.php">Jeu</a></li>
             <li><a href="http://localhost:8001/add.php">Ajout jeu</a></li>
             <li><a href="http://localhost:8001/modifier.php">Modifier jeu</a></li>
-            <li><a class="links" href="/">Back to menu</a></li>
+            <li><a href="http://localhost:8001/home.php">Back to menu</a></li>
         </ul>
     </nav>
     </nav>
-    <li><a class="links" href="/">Back to menu</a></li>
+        <a href="http://localhost:8001/home.php">Back to menu</a>
 
     <h1 style="background-color: black; color: white; width:fit-content">Index</h1>
     <p>créer table sql catalogue</p>
