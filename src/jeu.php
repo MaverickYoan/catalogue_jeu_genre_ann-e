@@ -67,6 +67,8 @@ if (
         </ul>
     </nav>
 
+    <a href="https://fabulous-platypus-fdb4a3.netlify.app">Wink Netlify WebbApp</a>
+
     <!-- <img width="10%" src="0Jvtfvy.gif" alt="Gran turismo 2 sur playstation"> -->
     <br>
     <h1 style="border:1px solid black; background-color: black; color: white; width:fit-content">Jeu</h1>

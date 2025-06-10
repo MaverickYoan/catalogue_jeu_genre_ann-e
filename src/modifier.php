@@ -102,6 +102,8 @@ if (
             <li><a href="http://localhost:8001/home.php">Back to menu</a></li>
         </ul>
     </nav>
+    
+    <a href="https://fabulous-platypus-fdb4a3.netlify.app">Wink Netlify WebbApp</a>
 
     <p style="border: 1px solid black; width: fit-content; background-color: yellow; color: black"><b>Modifier un jeu</b></p>
 

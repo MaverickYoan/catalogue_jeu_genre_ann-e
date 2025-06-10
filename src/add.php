@@ -94,6 +94,8 @@ if ($_POST) {
         </ul>
     </nav>
 
+    <a href="https://fabulous-platypus-fdb4a3.netlify.app">Wink Netlify WebbApp</a>
+
     <p style="border: 1px solid black; width: fit-content; background-color: green; color: white"><b>Ajouter un jeu</b></p>
 
     <!-- post envoie en masquer un formulaire -->

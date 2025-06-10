@@ -63,6 +63,9 @@ require "disconnect.php";
             <li><a href="http://localhost:8001/home.php">Back to menu</a></li>
         </ul>
     </nav>
+    
+    <a href="https://fabulous-platypus-fdb4a3.netlify.app">Wink Netlify WebbApp</a>
+
     <h1 style="background-color: black; color: white; width:fit-content">Indexds</h1>
     <p>créer table sql catalogue</p>
 
