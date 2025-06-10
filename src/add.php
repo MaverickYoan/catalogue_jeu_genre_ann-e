@@ -6,10 +6,12 @@ if ($_POST) {
         isset($_POST["jeu"])
         && isset($_POST["genre"])
         && isset($_POST["annee"])
+        && isset($_POST["editeur_id"])
         // * isset : est present même si vide; !empty oblige à inserer du contenu
         && !empty($_POST["jeu"])
         && !empty($_POST["genre"])
         && !empty($_POST["annee"])
+        && !empty($_POST["editeur_id"])
     ) {
         print_r(value: $_POST);
 
@@ -17,12 +19,13 @@ if ($_POST) {
         $jeu = strip_tags($_POST["jeu"]);
         $genre = strip_tags($_POST["genre"]);
         $annee = strip_tags($_POST["annee"]);
+        $annee = strip_tags($_POST["editeur_id"]);
 
         // * Check si connexion réussie
         require_once "connect.php";
 
         // * Requête SQL pour ajouter des données (finir le commentaire)
-        $sql = "INSERT INTO catalogue (jeu, genre, annee) VALUES (:jeu, :genre, :annee);";
+        $sql = "INSERT INTO catalogue (jeu, genre, annee, editeur_id) VALUES (:jeu, :genre, :annee, :editeur_id);";
 
         // * préparation de la base de données SQL
         $query = $db->prepare($sql);
@@ -35,6 +38,9 @@ if ($_POST) {
 
         // * Rattacher les valeurs de bindValue annee à la requête SQL
         $query->bindValue(":annee", $annee, PDO::PARAM_INT);
+
+        // * Rattacher les valeurs de bindValue annee à la requête SQL
+        $query->bindValue(":editeur_id", $annee, PDO::PARAM_INT);
 
         // * Exécution de la requête SQL
         $query->execute();
@@ -92,10 +98,10 @@ if ($_POST) {
         <input type="text" Name="jeu" id="jeu" required>
         <label for="genre">genre</label>
         <input type="text" Name="genre" id="genre" required>
-        <label for="editeur_id">editeur_id</label>
-        <input type="number" Name="editeur_id" id="editeur_id" required>
         <label for="annee">annee</label>
         <input type="number" Name="annee" id="annee" required>
+        <label for="editeur_id">editeur_id</label>
+        <input type="number" Name="editeur_id" id="editeur_id" required>
         <input type="submit" value="Ajouter">
     </form>
 
