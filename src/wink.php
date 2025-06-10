@@ -731,10 +731,10 @@
             <h1>wink</h1>
 
             <ul class="nav-links" id="navLinks">
-                <li><a href="http://localhost:8000/wink.php#Accueil/wink.php">Accueil</a></li>
-                <li><a href="http://localhost:8000/wink.php/wink.php#À propos/wink.php">À propos</a></li>
-                <li><a href="http://localhost:8000/wink.php/#catalog/">Catalogue</a></li>
-                <li><a href="http://localhost:8000/wink.php#images/wink.php">Images</a></li>
+                <li><a href="http://localhost:8001/wink.php#Accueil/wink.php">Accueil</a></li>
+                <li><a href="http://localhost:8001/wink.php/wink.php#À propos/wink.php">À propos</a></li>
+                <li><a href="http://localhost:8001/wink.php/#catalog/">Catalogue</a></li>
+                <li><a href="http://localhost:8001/wink.php#images/wink.php">Images</a></li>
                 <li><button data-page="admin" aria-label="Administration">Administration</button></li>
                 <li><button data-page="contact" aria-label="Contact">Contact</button></li>
                 <li><button data-page="projet" aria-label="Projet">Projet</button></li>

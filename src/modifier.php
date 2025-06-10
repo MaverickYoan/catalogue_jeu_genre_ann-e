@@ -90,12 +90,12 @@ if (
     <!-- NAVBAR -->
     <nav class="navbar">
         <ul class="nav-links" id="navLinks">
-            <li><a class="links" href="http://localhost:8000/home.html">home</a></li>
-            <li><a class="links" href="http://localhost:8000/index.php">Index</a></li>
-            <li><a class="links" href="http://localhost:8000/jeu.php">Jeu</a></li>
-            <li><a class="links" href="http://localhost:8000/liste.php">Liste de Jeux</a></li>
-            <li><a class="links" href="http://localhost:8000/add.php">Ajout jeu</a></li>
-            <li><a class="links" href="http://localhost:8000/modifier.php">Modifier jeu</a></li>
+            <li><a class="links" href="http://localhost:8001/home.html">home</a></li>
+            <li><a class="links" href="http://localhost:8001/index.php">Index</a></li>
+            <li><a class="links" href="http://localhost:8001/jeu.php">Jeu</a></li>
+            <li><a class="links" href="http://localhost:8001/liste.php">Liste de Jeux</a></li>
+            <li><a class="links" href="http://localhost:8001/add.php">Ajout jeu</a></li>
+            <li><a class="links" href="http://localhost:8001/modifier.php">Modifier jeu</a></li>
             <li><a class="links" href="/">Back to menu</a></li>
         </ul>
     </nav>
