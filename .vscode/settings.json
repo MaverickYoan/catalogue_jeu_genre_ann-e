@@ -45,6 +45,7 @@
         "pgsql",
         "PGUSER",
         "phar",
+        "phpmyadmin",
         "phpunit",
         "préparation",
         "problèmes",
@@ -58,5 +59,9 @@
         "Vidéos",
         "xmlreader",
         "xmlwriter"
-    ]
+    ],
+    "editor.quickSuggestions": false,
+    "ai-commit.AI_COMMIT_LANGUAGE": "French",
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "notebook.defaultFormatter": "vscode.html-language-features"
 }

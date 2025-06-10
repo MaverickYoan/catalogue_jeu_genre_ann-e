@@ -3,7 +3,7 @@ services:
     image: php:8.3-apache
     container_name: catalogue
     ports:
-      - '8000:80' # on définit le port pour accéder à l'application (localhost:8000) - incrémenter si le port est déjà utilisé par un autre projet
+      - '8001:80' # on définit le port pour accéder à l'application (localhost:8000) - incrémenter si le port est déjà utilisé par un autre projet
     volumes:
       - ./src:/var/www/html # on monte le dossier courant dans le dossier /var/www/html du container
     build:
@@ -24,6 +24,7 @@ services:
       - ./data:/docker-entrypoint-initdb.d # création de la table et insertion des données à partir du fichier users_postgres.sql
     ports:
       - '5432:5432' #  incrémenter si le port est déjà utilisé par un autre projet
+
   pgadmin:
     image: dpage/pgadmin4
     container_name: crud_pgadmin
@@ -40,3 +41,18 @@ services:
     depends_on:
       - db
  
+  # phpmyadmin:
+  #   image: phpmyadmin
+  #   container_name: crud_phpmyadmin
+  #   environment:
+  #     PMA_HOST: db
+  #     PMA_PORT: 5432
+  #     PMA_USER: test
+  #     PMA_PASSWORD: test
+  #   ports:
+  #     - '8081:80' # on définit le port pour accéder à phpmyadmin (localhost:8081) - incrémenter si le port est déjà utilisé par un autre projet
+  #   depends_on:
+  #     - db
+  
+  
+  

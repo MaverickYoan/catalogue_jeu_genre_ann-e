@@ -17,7 +17,7 @@ $query->execute();
 $catalogue = $query->fetchAll(PDO::FETCH_ASSOC);
 
 // * afficher la table catalogue
-// print_r($catalogue);
+print_r($catalogue);
 
 
 require "disconnect.php";
