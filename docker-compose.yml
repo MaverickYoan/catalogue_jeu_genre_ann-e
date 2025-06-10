@@ -25,34 +25,34 @@ services:
     ports:
       - '5432:5432' #  incrémenter si le port est déjà utilisé par un autre projet
 
-  phpmyadmin:
-    image: phpmyadmin
-    container_name: crud_phpmyadmin
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: crud_pgadmin
     environment:
-      PMA_HOST: db
-      PMA_PORT: 5432
-      PMA_USER: test
-      PMA_PASSWORD: test
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      # Simplification de la configuration - pas de fichiers externes
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: 'False'
     ports:
-      - '8081:80' # on définit le port pour accéder à phpmyadmin (localhost:8081) - incrémenter si le port est déjà utilisé par un autre projet
+      - '8082:80' # on définit le port pour accéder à pgadmin (localhost:8080) - incrémenter si le port est déjà utilisé par un autre projet
+    volumes:
+      - ./data/servers.json:/pgadmin4/servers.json
     depends_on:
       - db
-  
-  
-  
-  # pgadmin:
-  #   image: dpage/pgadmin4
-  #   container_name: crud_pgadmin
+ 
+  # phpmyadmin:
+  #   image: phpmyadmin
+  #   container_name: crud_phpmyadmin
   #   environment:
-  #     PGADMIN_DEFAULT_EMAIL: admin@admin.com
-  #     PGADMIN_DEFAULT_PASSWORD: admin
-  #     # Simplification de la configuration - pas de fichiers externes
-  #     PGADMIN_CONFIG_SERVER_MODE: 'False'
-  #     PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: 'False'
+  #     PMA_HOST: db
+  #     PMA_PORT: 5432
+  #     PMA_USER: test
+  #     PMA_PASSWORD: test
   #   ports:
-  #     - '8082:80' # on définit le port pour accéder à pgadmin (localhost:8080) - incrémenter si le port est déjà utilisé par un autre projet
-  #   volumes:
-  #     - ./data/servers.json:/pgadmin4/servers.json
+  #     - '8081:80' # on définit le port pour accéder à phpmyadmin (localhost:8081) - incrémenter si le port est déjà utilisé par un autre projet
   #   depends_on:
   #     - db
- 
+  
+  
+  
