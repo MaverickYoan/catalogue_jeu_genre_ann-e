@@ -719,27 +719,24 @@
 
 </head>
 
-<body id="content" class="body">
-    <header>
-        <!-- Navbar section ------------->
-        <nav class="navbar">
-            <div class="hamburger-menu" id="hamburgerMenu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <h1>wink</h1>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="http://localhost:8001/wink.php#Accueil/wink.php">Accueil</a></li>
-                <li><a href="http://localhost:8001/wink.php/wink.php#À propos/wink.php">À propos</a></li>
-                <li><a href="http://localhost:8001/wink.php/#catalog/">Catalogue</a></li>
-                <li><a href="http://localhost:8001/wink.php#images/wink.php">Images</a></li>
-                <li><button data-page="admin" aria-label="Administration">Administration</button></li>
-                <li><button data-page="contact" aria-label="Contact">Contact</button></li>
-                <li><button data-page="projet" aria-label="Projet">Projet</button></li>
-            </ul>
-        </nav>
+<body id="content"><!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="http://localhost:8001/home.html">home</a></li>
+            <li><a href="http://localhost:8001/jeux.html">Jeux</a></li>
+            <li><a href="http://localhost:8001/index.php">Index</a></li>
+            <li><a href="http://localhost:8001/liste.php">Liste de Jeux</a></li>
+            <li><a href="http://localhost:8001/jeu.php">Jeu</a></li>
+            <li><a href="http://localhost:8001/add.php">Ajout jeu</a></li>
+            <li><a href="http://localhost:8001/modifier.php">Modifier jeu</a></li>
+            <li><a class="links" href="/">Back to menu</a></li>
+        </ul>
+    </nav>
     </header>
 
     <main>

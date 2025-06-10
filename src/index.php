@@ -44,17 +44,22 @@ require "disconnect.php";
 
 <!-- BODY -->
 
-<body id="content" style="background-image: url(img/b3b48a35785465ed53f20d332f191a5c.gif);">
-
-    <!-- NAVBAR -->
+<body id="content"><!-- NAVBAR -->
     <nav class="navbar">
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <ul class="nav-links" id="navLinks">
-            <li><a class="links" href="http://localhost:8001/home.html">home</a></li>
-            <li><a class="links" href="http://localhost:8001/index.php">Index</a></li>
-            <li><a class="links" href="http://localhost:8001/jeu.php">Jeu</a></li>
-            <li><a class="links" href="http://localhost:8001/liste.php">Liste de Jeux</a></li>
-            <li><a class="links" href="http://localhost:8001/add.php">Ajout jeu</a></li>
-            <li><a class="links" href="http://localhost:8001/modifier.php">Modifier jeu</a></li>
+            <li><a href="http://localhost:8001/home.html">home</a></li>
+            <li><a href="http://localhost:8001/jeux.html">Jeux</a></li>
+            <li><a href="http://localhost:8001/index.php">Index</a></li>
+            <li><a href="http://localhost:8001/liste.php">Liste de Jeux</a></li>
+            <li><a href="http://localhost:8001/jeu.php">Jeu</a></li>
+            <li><a href="http://localhost:8001/add.php">Ajout jeu</a></li>
+            <li><a href="http://localhost:8001/modifier.php">Modifier jeu</a></li>
+            <li><a class="links" href="/">Back to menu</a></li>
         </ul>
     </nav>
     <li><a class="links" href="/">Back to menu</a></li>
