@@ -2,6 +2,7 @@ CREATE TABLE editeurs (
     id SERIAL PRIMARY KEY,
     nom VARCHAR(255) NOT NULL,
     pays VARCHAR(100) NOT NULL
+    editeur_id INT REFERENCES editeurs(id)
 );
 
 INSERT INTO editeurs (nom, pays) VALUES
